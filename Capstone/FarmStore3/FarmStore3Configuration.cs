@@ -7,5 +7,11 @@ namespace FarmStore3
 {
     public class FarmStore3Configuration
     {
+        public Database Database { get; set; }
+    }
+
+    public class Database
+    {
+        public string ConnectionSTring { get; set; }
     }
 }

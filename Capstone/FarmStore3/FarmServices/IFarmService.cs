@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace FarmStore3.FarmServices
 {
-    interface IFarmService
+    public interface IFarmService
     {
+
     }
 }

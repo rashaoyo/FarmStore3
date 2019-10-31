@@ -28,3 +28,5 @@ C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\obj\Debug\netcoreapp2.2
 C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.dll
 C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.pdb
 C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.csproj.CopyComplete
+C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Farm\AddProduce.g.cshtml.cs
+C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Farm\Produce.g.cshtml.cs

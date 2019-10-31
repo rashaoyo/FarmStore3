@@ -30,7 +30,7 @@ namespace FarmStore3
                .AddJsonFile("appsettings.json", false, true)
                .AddEnvironmentVariables()
                .Build();
-            var appConfig = new FarmStoreConfiguration();
+            var appConfig = new FarmStore3Configuration();
             config.Bind("FarmStoreConfiguration", appConfig);
 
             services.Configure<CookiePolicyOptions>(options =>

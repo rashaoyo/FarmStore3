@@ -58,3 +58,10 @@ C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.RazorTarge
 >>>>>>> f7d58d329df7080e14527f8a825623f4f6da8b82
 C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.dll
 C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.pdb
+C:\GrandCircus\Capstone\FarmStore3\bin\Debug\netcoreapp2.2\FarmStore3.pdb
+C:\GrandCircus\Capstone\FarmStore3\bin\Debug\netcoreapp2.2\FarmStore3.Views.dll
+C:\GrandCircus\Capstone\FarmStore3\bin\Debug\netcoreapp2.2\FarmStore3.Views.pdb
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Farm\AddProduce.g.cshtml.cs
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Farm\Produce.g.cshtml.cs
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.Views.pdb
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.csproj.CopyComplete

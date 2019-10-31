@@ -3,11 +3,14 @@
     "",
     "\\Capstone",
     "\\Capstone\\FarmStore3",
-    "\\Capstone\\FarmStore3\\Controllers",
-    "\\Capstone\\FarmStore3\\Models",
-    "\\Capstone\\FarmStore3\\Properties",
-    "\\Capstone\\FarmStore3\\Views"
+    "\\Capstone\\FarmStore3\\DAL",
+    "\\Capstone\\FarmStore3\\DAL\\Models",
+    "\\Capstone\\FarmStore3\\FarmServices",
+    "\\Capstone\\FarmStore3\\Views",
+    "\\Capstone\\FarmStore3\\Views\\Farm",
+    "\\Capstone\\FarmStore3\\Views\\Home",
+    "\\Capstone\\FarmStore3\\Views\\Shared"
   ],
-  "SelectedNode": "\\Capstone\\FarmStore3\\Controllers",
+  "SelectedNode": "\\Capstone\\FarmStore3\\Views\\Shared\\_Layout.cshtml",
   "PreviewInSolutionExplorer": false
 }

@@ -13,6 +13,8 @@ namespace FarmStore3.FarmServices
         ProductViewModel GetProducts();
 
         ProductViewModel AddNewProduct(Products model);
+
+        ProductViewModel UpdateProduce(int id, Products produce);
     }
 
     public class ProductService : IFarmService
@@ -63,6 +65,12 @@ namespace FarmStore3.FarmServices
             ProductViewModel.Products = products;
 
             return ProductViewModel;
+        }
+
+        public ProductViewModel UpdateProduce(int id, Products produce)
+        {
+            _farmStore.UpdateProduct(id, produce);
+            throw new NotImplementedException();
         }
     }
 }

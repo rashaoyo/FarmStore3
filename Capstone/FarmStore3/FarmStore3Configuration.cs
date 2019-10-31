@@ -12,6 +12,6 @@ namespace FarmStore3
 
     public class Database
     {
-        public string ConnectionSTring { get; set; }
+        public string ConnectionString { get; set; }
     }
 }

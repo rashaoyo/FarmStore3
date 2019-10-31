@@ -13,5 +13,6 @@ namespace FarmStore3.DAL.Models
         public int CartQuantity { get; set; }
         public decimal UnitPrice { get; set; }
         public bool InSeason { get; set; }
+        // hello
     }
 }

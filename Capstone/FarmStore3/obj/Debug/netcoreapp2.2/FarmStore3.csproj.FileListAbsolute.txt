@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\bin\Debug\netcoreapp2.2\FarmStore3.deps.json
 C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\bin\Debug\netcoreapp2.2\FarmStore3.runtimeconfig.json
 C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\bin\Debug\netcoreapp2.2\FarmStore3.runtimeconfig.dev.json
@@ -30,3 +31,28 @@ C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\obj\Debug\netcoreapp2.2
 C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.csproj.CopyComplete
 C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Farm\AddProduce.g.cshtml.cs
 C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Farm\Produce.g.cshtml.cs
+=======
+C:\GrandCircus\Capstone\FarmStore3\bin\Debug\netcoreapp2.2\FarmStore3.deps.json
+C:\GrandCircus\Capstone\FarmStore3\bin\Debug\netcoreapp2.2\FarmStore3.runtimeconfig.json
+C:\GrandCircus\Capstone\FarmStore3\bin\Debug\netcoreapp2.2\FarmStore3.runtimeconfig.dev.json
+C:\GrandCircus\Capstone\FarmStore3\bin\Debug\netcoreapp2.2\FarmStore3.dll
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.csprojAssemblyReference.cache
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.csproj.CoreCompileInputs.cache
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.RazorAssemblyInfo.cache
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.RazorAssemblyInfo.cs
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.AssemblyInfoInputs.cache
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.AssemblyInfo.cs
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.TagHelpers.input.cache
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.TagHelpers.output.cache
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.RazorCoreGenerate.cache
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.g.cshtml.cs
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.g.cshtml.cs
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_CookieConsentPartial.g.cshtml.cs
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_Layout.g.cshtml.cs
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ValidationScriptsPartial.g.cshtml.cs
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\_ViewImports.g.cshtml.cs
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\_ViewStart.g.cshtml.cs
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.RazorTargetAssemblyInfo.cache
+C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.RazorTargetAssemblyInfo.cs
+>>>>>>> f7d58d329df7080e14527f8a825623f4f6da8b82

@@ -20,6 +20,13 @@ namespace FarmStore3.Controllers
             return View();
         }
 
+
+        public IActionResult DeletProduce()
+        {
+            return View();
+        }
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

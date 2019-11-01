@@ -72,5 +72,28 @@ namespace FarmStore3.FarmServices
             _farmStore.UpdateProduct(id, produce);
             throw new NotImplementedException();
         }
+
+        public ProductViewModel DeletAProduct(Products model)
+        {
+            var dalModel = new FarmDALModel();
+            dalModel.ProduceName = model.ProduceName;
+            _farmStore.DeleteTheProduct(dalModel);
+
+            //MAPPING
+            var dalProducts = _farmStore.SelectAllProduct();
+            var products = new List<Products>();
+
+            foreach (var dalProduct in dalProducts)
+            {
+                var product = new Products();
+                product.ProduceName = dalProduct.ProduceName;
+                products.Add(product);
+            }
+
+            var ProductViewModel = new ProductViewModel();
+            ProductViewModel.Products = products;
+
+            return ProductViewModel;
+        }
     }
 }

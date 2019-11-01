@@ -16,7 +16,24 @@ namespace FarmStore3.Controllers
         {
             return View();
         }
+
         public IActionResult AddProduce()
+        {
+            return View();
+        }
+
+
+        public IActionResult FarmStore()
+        {
+            return View();
+        }
+
+        public IActionResult Cart()
+        {
+            return View();
+        }
+
+        public IActionResult DeletProduce()
         {
             return View();
         }

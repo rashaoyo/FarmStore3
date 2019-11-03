@@ -70,7 +70,31 @@ namespace FarmStore3.FarmServices
         public ProductViewModel UpdateProduce(int id, Products produce)
         {
             _farmStore.UpdateProduct(id, produce);
-            throw new NotImplementedException();
+            var dalProducts = _farmStore.SelectAllProduct();
+
+            return MapProductViewModel(dalProducts);
+        }
+
+        private ProductViewModel MapProductViewModel(IEnumerable<FarmDALModel> dalProducts)
+        {
+            var _products = new List<Products>();
+            foreach (FarmDALModel item in dalProducts)
+            {
+                var product = new Products();
+
+                product.ProduceID = item.ProduceID;
+                product.ProduceName = item.ProduceName;
+                product.StockQuantity = item.StockQuantity;
+                product.CartQuantity = item.CartQuantity;
+                product.UnitPrice = item.UnitPrice;
+                product.InSeason = item.InSeason;
+
+                _products.Add(product);
+            }
+
+            var model = new ProductViewModel();
+            model.Products = _products;
+            return model;
         }
     }
 }

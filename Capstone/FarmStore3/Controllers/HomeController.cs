@@ -20,8 +20,7 @@ namespace FarmStore3.Controllers
             return View();
         }
 
-
-        public IActionResult DeletProduce()
+        public IActionResult Farm()
         {
             return View();
         }

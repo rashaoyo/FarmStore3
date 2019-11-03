@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using FarmStore3.DAL;
+using FarmStore3.FarmServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -25,6 +27,7 @@ namespace FarmStore3
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
             var config = new ConfigurationBuilder()
                .SetBasePath(Directory.GetCurrentDirectory())
                .AddJsonFile("appsettings.json", false, true)
@@ -32,6 +35,7 @@ namespace FarmStore3
                .Build();
             var appConfig = new FarmStore3Configuration();
             config.Bind("FarmStoreConfiguration", appConfig);
+
 
             services.Configure<CookiePolicyOptions>(options =>
             {
@@ -41,6 +45,9 @@ namespace FarmStore3
             });
 
 
+            services.AddSingleton(appConfig);
+            services.AddSingleton<IFarmStore, ProductStore>();
+            services.AddSingleton<IFarmService, ProductService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

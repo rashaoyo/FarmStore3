@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 
 namespace FarmStore3.DAL
 {
-    public interface IFarmStore
+    public interface IFarmStore2
     {
         IEnumerable<FarmDALModel> SelectAllProducts();
         FarmDALModel SelectProduceByProduceName(string produceName);
@@ -14,11 +14,11 @@ namespace FarmStore3.DAL
 
     }
 
-    public class FarmStore : IFarmStore
+    public class FarmStore2 : IFarmStore2
     {
         private readonly Database _config;
 
-        public FarmStore(FarmStore3Configuration config)
+        public FarmStore2(FarmStore3Configuration config)
         {
             _config = config.Database;
         }

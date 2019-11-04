@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace FarmStore3.Controllers
 {
-    public class FarmController : Controller
+    public class FarmController2 : Controller
     {
         private readonly IFarmService _farmService;
 
-        public FarmController(IFarmService productService)
+        public FarmController2(IFarmService productService)
         {
             _farmService = productService;
         }

@@ -8,18 +8,18 @@ using System.Threading.Tasks;
 
 namespace FarmStore3.FarmServices
 {
-    public interface IFarmService
+    public interface IFarmService2
     {
         ProductViewModel GetAllProducts();
         Products GetProduct(int produceID);
         ProductViewModel AddNewProduct(AddProductViewModel model);
     }
 
-    public class FarmService : IFarmService
+    public class FarmService2 : IFarmService2
     {
         private readonly IFarmStore _farmStore;
 
-        public FarmService(IFarmStore farmStore)
+        public FarmService2(IFarmStore farmStore)
         {
             _farmStore = farmStore;
         }

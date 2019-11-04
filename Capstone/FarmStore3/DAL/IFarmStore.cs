@@ -7,27 +7,28 @@ namespace FarmStore3.DAL
 {
     public interface IFarmStore
     {
-        IEnumerable<FarmDALModel> SelectAllProduct();
-
+        IEnumerable<FarmDALModel> SelectAllProducts();
+        FarmDALModel SelectProduceByProduceName(string produceName);
+        FarmDALModel SelectProduceByProduceID(int produceID);
         bool InsertNewProduct(FarmDALModel dalModel);
 
     }
 
-    public class ProductStore : IFarmStore
+    public class FarmStore : IFarmStore
     {
         private readonly Database _config;
 
-        public ProductStore(FarmStore3Configuration config)
+        public FarmStore(FarmStore3Configuration config)
         {
             _config = config.Database;
         }
 
 
-        public IEnumerable<FarmDALModel> SelectAllProduct()
+        public IEnumerable<FarmDALModel> SelectAllProducts()
         {
             var sql = @"SELECT * FROM Produce";
 
-            using (var connection = new SqlConnection(_config.ConnectionSTring))
+            using (var connection = new SqlConnection(_config.ConnectionString))
             {
                 var result = connection.Query<FarmDALModel>(sql);
 
@@ -39,7 +40,7 @@ namespace FarmStore3.DAL
             //ADD PRODUCT
             var sql = $@"Insert INTO Produce (ProduceName) Values (@{nameof(dalModel.ProduceName)})";
 
-            using (var connection = new SqlConnection(_config.ConnectionSTring))
+            using (var connection = new SqlConnection(_config.ConnectionString))
             {
                 var result = connection.Execute(sql, dalModel);
 
@@ -48,6 +49,25 @@ namespace FarmStore3.DAL
 
         }
 
+        public FarmDALModel SelectProduceByProduceName(string produceName)
+        {
+            var sql = @"SELECT * FROM Produce WHERE ProduceName LIKE @ProduceName";
+            using (var connection = new SqlConnection(_config.ConnectionString))
+            {
+                var result = connection.QueryFirstOrDefault<FarmDALModel>(sql, new { ProduceName = $"%{produceName}%" });
+                return result;
+            }
+        }
 
+        public FarmDALModel SelectProduceByProduceID(int produceID)
+        {
+            var sql = @"SELECT * FROM Produce where ProduceID = @ProduceID";
+
+            using (var connection = new SqlConnection(_config.ConnectionString))
+            {
+                var result = connection.QueryFirstOrDefault<FarmDALModel>(sql, new { ProduceID = produceID });
+                return result;
+            }
+        }
     }
 }

@@ -1,7 +1,24 @@
-﻿
+﻿@model FarmStore3.Models.ProductViewModel
+
 @{
-    ViewData["Title"] = "Produce";
+    ViewData["Title"] = "Customers";
 }
 
-<h1>Produce</h1>
+<h1>List of Produce</h1>
 
+<div>
+    <ul>
+        @foreach (var product in Model.ListOfProducts)
+        {
+            <li>
+                <a asp-controller="Farm" asp-action="GetAllProduce" asp-route-id="@product.Name">@product.ID</a>
+            </li>
+        }
+    </ul>
+</div>
+
+
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using FarmStore3.DAL;
+using FarmStore3.FarmServices;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -31,7 +33,11 @@ namespace FarmStore3
                .AddEnvironmentVariables()
                .Build();
             var appConfig = new FarmStore3Configuration();
-            config.Bind("FarmStoreConfiguration", appConfig);
+            config.Bind("FarmStore3Configuration", appConfig);
+
+            services.AddSingleton<IFarmService, FarmService>();
+            services.AddSingleton<IFarmStore, FarmStore>();
+            services.AddSingleton(appConfig);
 
             services.Configure<CookiePolicyOptions>(options =>
             {

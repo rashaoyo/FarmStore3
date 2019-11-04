@@ -1,0 +1,33 @@
+﻿@model FarmStore3.Models.Products
+
+@{
+    ViewData["Title"] = "Product";
+}
+
+<h1>Product</h1>
+
+<div>
+    <h4>Products</h4>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.ProduceName)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.ProduceName)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.ProduceID)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.ProduceID)
+    </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.StockQuantity)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.StockQuantity)
+    </dd>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

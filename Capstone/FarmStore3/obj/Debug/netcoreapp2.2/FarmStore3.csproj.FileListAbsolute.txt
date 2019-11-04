@@ -65,3 +65,8 @@ C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Farm\AddP
 C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Farm\Produce.g.cshtml.cs
 C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.Views.pdb
 C:\GrandCircus\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\FarmStore3.csproj.CopyComplete
+C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Farm\CartView.g.cshtml.cs
+C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Farm\FarmStoreView.g.cshtml.cs
+C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Farm\Home.g.cshtml.cs
+C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Farm\Product.g.cshtml.cs
+C:\Users\rasha\source\repos\Capstone\Capstone\FarmStore3\obj\Debug\netcoreapp2.2\Razor\Views\Farm\GetProduct.g.cshtml.cs

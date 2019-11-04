@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FarmStore3.FarmServices;
+using FarmStore3.Models;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +10,52 @@ namespace FarmStore3.Controllers
 {
     public class FarmController : Controller
     {
-        public IActionResult Produce()
+        private readonly IFarmService _farmService;
+
+        public FarmController(IFarmService productService)
+        {
+            _farmService = productService;
+        }
+        public IActionResult GetAllProduce()
+        {
+            var result = _farmService.GetAllProducts();
+            return View(result);
+        }
+        public IActionResult AddProduct()
         {
             return View();
         }
-        public IActionResult AddProduce()
+        public IActionResult AddProduce(AddProductViewModel model)
+        {
+            var productsViewModel = _farmService.AddNewProduct(model);
+            if (!ModelState.IsValid)
+            {
+                return View("Error", new ErrorViewModel
+                { ErrorMessage = "Error product was not added correctly" });
+            }
+            else
+            {
+                return View("Produce", productsViewModel);
+            }
+            
+        }
+
+        public IActionResult GetProduct()
+        {
+            return View();
+        }
+
+        public IActionResult FarmStoreView()
+        {
+            return View();
+        }
+
+        public IActionResult CartView()
+        {
+            return View();
+        }
+
+        public IActionResult Home()
         {
             return View();
         }

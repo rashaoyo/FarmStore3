@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "GetProduct";
+}
+
+<h1>Get Product</h1>
+
+<h4>search for the product by name.</h4>
+
+<form asp-controller="Farm" asp-action="GetAllProduce">
+    <label>First Name of Product</label>
+    <input type="text" name="productName" />
+    <button>Get</button>
+</form>

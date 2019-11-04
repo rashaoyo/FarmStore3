@@ -27,6 +27,7 @@ namespace FarmStore3
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
             var config = new ConfigurationBuilder()
                .SetBasePath(Directory.GetCurrentDirectory())
                .AddJsonFile("appsettings.json", false, true)
@@ -39,6 +40,7 @@ namespace FarmStore3
             services.AddSingleton<IFarmStore, FarmStore>();
             services.AddSingleton(appConfig);
 
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -47,6 +49,9 @@ namespace FarmStore3
             });
 
 
+            services.AddSingleton(appConfig);
+            services.AddSingleton<IFarmStore, ProductStore>();
+            services.AddSingleton<IFarmService, ProductService>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

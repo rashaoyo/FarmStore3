@@ -10,54 +10,39 @@ namespace FarmStore3.Controllers
 {
     public class FarmController : Controller
     {
-        private readonly IFarmService _farmService;
+        private readonly IFarmService _FarmService;
 
-        public FarmController(IFarmService productService)
-        {
-            _farmService = productService;
-        }
-        public IActionResult GetAllProduce()
-        {
-            var result = _farmService.GetAllProducts();
-            return View(result);
-        }
-        public IActionResult AddProduct()
-        {
-            return View();
-        }
-        public IActionResult AddProduce(AddProductViewModel model)
-        {
-            var productsViewModel = _farmService.AddNewProduct(model);
-            if (!ModelState.IsValid)
-            {
-                return View("Error", new ErrorViewModel
-                { ErrorMessage = "Error product was not added correctly" });
-            }
-            else
-            {
-                return View("Produce", productsViewModel);
-            }
-            
-        }
-
-        public IActionResult GetProduct()
+        public IActionResult Produce()
         {
             return View();
         }
 
-        public IActionResult FarmStoreView()
+        public IActionResult AddProduce()
         {
             return View();
         }
 
-        public IActionResult CartView()
+
+        public IActionResult FarmStore()
         {
             return View();
         }
 
-        public IActionResult Home()
+        public IActionResult Cart()
         {
             return View();
+        }
+
+        public IActionResult DeletProduce()
+        {
+            return View();
+        }
+
+        public IActionResult UpdateProduce(int id, Products produce)
+        {
+            var updatedProduce = _FarmService.UpdateProduce(id, produce);
+            var view = _FarmService.GetProducts();
+            return View("Produce", view);
         }
 
     }

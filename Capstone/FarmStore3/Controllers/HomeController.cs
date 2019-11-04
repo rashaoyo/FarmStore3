@@ -20,6 +20,12 @@ namespace FarmStore3.Controllers
             return View();
         }
 
+        public IActionResult Farm()
+        {
+            return View();
+        }
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

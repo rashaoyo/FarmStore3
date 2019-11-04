@@ -8,8 +8,9 @@ namespace FarmStore3.DAL
 {
     public interface IFarmStore
     {
-        IEnumerable<FarmDALModel> SelectAllProduct();
-
+        IEnumerable<FarmDALModel> SelectAllProducts();
+        FarmDALModel SelectProduceByProduceName(string produceName);
+        FarmDALModel SelectProduceByProduceID(int produceID);
         bool InsertNewProduct(FarmDALModel dalModel);
 
         bool UpdateProduct(int ProduceId, Products updatedProduct);
@@ -26,7 +27,7 @@ namespace FarmStore3.DAL
         }
 
 
-        public IEnumerable<FarmDALModel> SelectAllProduct()
+        public IEnumerable<FarmDALModel> SelectAllProducts()
         {
             var sql = @"SELECT * FROM Produce";
 
@@ -78,6 +79,27 @@ namespace FarmStore3.DAL
             {
                 var result = connection.Execute(sql, new { ProduceID = $"%{dalModel.ProduceID}%" });
                 return true;
+            }
+        }
+
+        public FarmDALModel SelectProduceByProduceName(string produceName)
+        {
+            var sql = @"SELECT * FROM Produce WHERE ProduceName LIKE @ProduceName";
+            using (var connection = new SqlConnection(_config.ConnectionString))
+            {
+                var result = connection.QueryFirstOrDefault<FarmDALModel>(sql, new { ProduceName = $"%{produceName}%" });
+                return result;
+            }
+        }
+
+        public FarmDALModel SelectProduceByProduceID(int produceID)
+        {
+            var sql = @"SELECT * FROM Produce where ProduceID = @ProduceID";
+
+            using (var connection = new SqlConnection(_config.ConnectionString))
+            {
+                var result = connection.QueryFirstOrDefault<FarmDALModel>(sql, new { ProduceID = produceID });
+                return result;
             }
         }
 

@@ -6,3 +6,7 @@ bin/
 
 # Ignore folder named "obj"
 obj/
+
+Capstone/FarmStore3/.vs/
+Capstone/FarmStore3/bin/
+Capstone/FarmStore3/obj/
